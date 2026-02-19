@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teams>
+  <team>
+    <name>Aurora Gaming</name>
+    <logo>aurora.png</logo>
+    <player>Nightfall</player>
+    <player>kiyotaka</player>
+    <player>TORONTOTOKYO</player>
+    <player>Mira</player>
+    <player>panto</player>
+  </team>
+  <team>
+    <name>BetBoom Team</name>
+    <logo>betboom.png</logo>
+    <player>Kiritych</player>
+    <player>gpk</player>
+    <player>MieRo</player>
+    <player>Save-</player>
+    <player>Kataomi`</player>
+  </team>
+  <team>
+    <name>Team Liquid</name>
+    <logo>liquid.png</logo>
+    <player>V-Tune</player>
+    <player>Nisha</player>
+    <player>SaberLight</player>
+    <player>Boxi</player>
+    <player>Insania</player>
+  </team>
+  <team>
+    <name>Shopify Rebellion</name>
+    <logo>sr.png</logo>
+    <player>Timado</player>
+    <player>Yopaj</player>
+    <player>Davai Lama</player>
+    <player>Hellscream</player>
+    <player>skem</player>
+  </team>
+  <team>
+    <name>Xtreme Gaming</name>
+    <logo>xg.png</logo>
+    <player>Ame</player>
+    <player>Xm</player>
+    <player>Xxs</player>
+    <player>Xinq</player>
+    <player>poloson</player>
+  </team>
+  <team>
+    <name>BOOM Esports</name>
+    <logo>boom.png</logo>
+    <player>JaCkky</player>
+    <player>Armel</player>
+    <player>Jabz</player>
+    <player>TIMS</player>
+    <player>Jaunuel</player>
+  </team>
+  <team>
+    <name>PARIVISION</name>
+    <logo>parivision.png</logo>
+    <player>Satanic</player>
+    <player>No[o]ne-</player>
+    <player>DM</player>
+    <player>9Class</player>
+    <player>Dukalis</player>
+  </team>
+  <team>
+    <name>Talon Esports</name>
+    <logo>talon.png</logo>
+    <player>23savage</player>
+    <player>Mikoto</player>
+    <player>Ws</player>
+    <player>Jhocam</player>
+    <player>Kuku</player>
+  </team>
+  <team>
+    <name>Gaimin Gladiators</name>
+    <logo>gg.png</logo>
+    <player>watson</player>
+    <player>Quinn</player>
+    <player>Ace</player>
+    <player>tOfu</player>
+    <player>Malady</player>
+  </team>
+  <team>
+    <name>Team Falcons</name>
+    <logo>falcons.png</logo>
+    <player>skiter</player>
+    <player>Malr1ne</player>
+    <player>ATF</player>
+    <player>Cr1t-</player>
+    <player>Sneyking</player>
+  </team>
+</teams>

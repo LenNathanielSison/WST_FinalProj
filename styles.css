@@ -1,0 +1,378 @@
+/* === Base Layout === */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background: #1e1e2f;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #2c2c3e;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  padding: 14px 20px;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #36364a;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px auto 30px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.left-info h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #34d058;
+  letter-spacing: 2px;
+  margin: 0;
+  background: linear-gradient(90deg, #34d058, #28a745);
+  background-clip: text;               /* Standard property */
+  -webkit-background-clip: text;       /* Safari/Chrome */
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* === Page Header === */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.left-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.show-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.show-btn:hover {
+  background-color: #218838;
+}
+
+/* === CRUD Buttons === */
+.crud-buttons button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  transition: 0.3s ease;
+}
+
+.crud-buttons button:hover {
+  background-color: #218838;
+}
+
+/* === Team Cards === */
+#teams-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-card {
+  background: #2c2c3e;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  width: 220px;
+  height: 220px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+.team-card h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.team-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto 15px;
+  border: none;
+}
+
+/* === Hover Effect for Player List === */
+.players-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 44, 62, 0.98);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.team-card:hover .players-container,
+.team-card.show-players .players-container {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.players-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-numbers,
+.players-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.player-numbers div,
+.players-list div {
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.player-numbers div {
+  color: #ccc;
+}
+
+.players-list div {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: #777;
+  height: calc(24px * 5);
+}
+
+/* === Modal Styling === */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal form,
+.modal > div {
+  background-color: #2b2b3c;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+}
+
+.modal h3 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.modal input,
+.modal select,
+.modal button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  background: #3a3a4d;
+  color: white;
+  border: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modal button {
+  background-color: #28a745;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #218838;
+}
+
+.modal button[type="button"] {
+  background-color: #6c757d;
+}
+
+.modal button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+#playersInputs input {
+  margin-top: 5px;
+}
+
+/* === Header Info === */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c2c3e;
+  padding: 10px 20px;
+}
+
+.left-info h4 {
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.center-info {
+  text-align: center;
+}
+
+.right-info {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.season-title {
+  font-size: 20px;
+  background-color: #3a3a4d;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+/* === Navigation Links === */
+.right-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.right-links li {
+  display: inline;
+}
+
+.right-links a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.right-links a:hover {
+  color: #28a745;
+}
+
+/* === About Page Card === */
+.about-card {
+  background: #2c2c3e;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: 20px auto;
+  align-items: center;
+}
+
+.about-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.about-text p {
+  margin: 0;
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+}
